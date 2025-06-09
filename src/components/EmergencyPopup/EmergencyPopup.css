@@ -1,0 +1,334 @@
+.emergency-popup {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(220, 53, 69, 0.2), 0 4px 16px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  width: 210px;
+  transition: all 0.3s ease;
+  animation: slideInFromRight 0.5s ease-out;
+  border: 1px solid rgba(220, 53, 69, 0.2);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
+}
+
+.emergency-popup.minimized {
+  width: 210px;
+}
+
+@keyframes slideInFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+.emergency-header {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  color: #ffffff;
+  border-radius: 16px 16px 0 0;
+  gap: 8px;
+  position: relative;
+}
+
+.emergency-header::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+}
+
+.emergency-icon {
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.emergency-icon svg {
+  width: 18px;
+  height: 18px;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+.emergency-title {
+  flex: 1;
+  min-width: 0;
+}
+
+.emergency-title h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.emergency-title span {
+  font-size: 0.75rem;
+  opacity: 0.85;
+  font-weight: 400;
+}
+
+.emergency-controls {
+  display: flex;
+  gap: 4px;
+}
+
+.minimize-btn,
+.close-btn {
+  width: 22px;
+  height: 22px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.minimize-btn:hover,
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.25);
+  transform: scale(1.05);
+}
+
+.emergency-content {
+  padding: 16px;
+}
+
+.emergency-call {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  background: linear-gradient(135deg, #dc3545 0%, #c82333 100%);
+  color: #ffffff;
+  text-decoration: none;
+  border-radius: 12px;
+  gap: 10px;
+  transition: all 0.2s ease;
+  box-shadow: 0 2px 8px rgba(220, 53, 69, 0.2);
+  margin-bottom: 12px;
+}
+
+.emergency-call:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.3);
+  color: white;
+}
+
+.call-icon {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: ring 3s infinite;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  flex-shrink: 0;
+}
+
+@keyframes ring {
+  0%, 100% { transform: rotate(0deg) scale(1); }
+  10%, 30% { transform: rotate(-8deg) scale(1.02); }
+  20% { transform: rotate(8deg) scale(1.02); }
+}
+
+.call-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.call-details {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-width: 0;
+}
+
+.call-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-bottom: 2px;
+}
+
+.call-text {
+  font-size: 0.8rem;
+  opacity: 0.85;
+  font-weight: 400;
+}
+
+.emergency-services {
+  display: flex;
+  gap: 6px;
+  justify-content: space-between;
+}
+
+.service-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 8px 6px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 10px;
+  text-align: center;
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: #495057;
+  flex: 1;
+  border: 1px solid rgba(220, 53, 69, 0.1);
+  transition: all 0.2s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-color: rgba(220, 53, 69, 0.2);
+}
+
+.service-icon {
+  font-size: 1.2rem;
+  margin-bottom: 3px;
+  display: block;
+}
+
+.service-text {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: #495057;
+}
+
+.emergency-note {
+  font-size: 0.7rem;
+  color: #6c757d;
+  text-align: center;
+  margin: 0;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .emergency-popup {
+    right: 15px;
+    bottom: 100px;
+    width: 260px;
+  }
+
+  .emergency-popup.minimized {
+    width: 200px;
+  }
+
+  .emergency-header {
+    padding: 10px 14px;
+  }
+
+  .emergency-content {
+    padding: 14px;
+  }
+
+  .emergency-main {
+    margin-bottom: 10px;
+  }
+
+  .emergency-call {
+    padding: 10px;
+    gap: 8px;
+    margin-bottom: 10px;
+  }
+
+  .call-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .call-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .call-number {
+    font-size: 1.3rem;
+  }
+
+  .call-text {
+    font-size: 0.75rem;
+  }
+
+  .emergency-services {
+    gap: 4px;
+  }
+
+  .service-item {
+    padding: 6px 4px;
+  }
+
+  .service-icon {
+    font-size: 1.1rem;
+    margin-bottom: 2px;
+  }
+
+  .service-text {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .emergency-popup {
+    width: 240px;
+    right: 10px;
+    bottom: 80px;
+  }
+
+  .emergency-popup.minimized {
+    width: 180px;
+  }
+
+  .emergency-header {
+    padding: 8px 12px;
+  }
+
+  .emergency-content {
+    padding: 12px;
+  }
+
+  .call-number {
+    font-size: 1.2rem;
+  }
+
+  .emergency-title h4 {
+    font-size: 0.9rem;
+  }
+
+  .emergency-title span {
+    font-size: 0.7rem;
+  }
+}
