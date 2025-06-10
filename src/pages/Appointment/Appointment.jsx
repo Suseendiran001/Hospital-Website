@@ -164,9 +164,9 @@ const Appointment = () => {
   const filteredDoctors = doctors.filter(doctor => 
     !formData.department || doctor.department === formData.department
   );
-
   return (
-    <div className="appointment-page">      {/* Hero Section */}
+    <div className="appointment-page" style={{background: '#ffffff', minHeight: '100vh', display: 'block', width: '100%'}}>      
+    {/* Hero Section */}
       <section className="appointment-hero">
         <div className="appointment-hero-background">
           <div className="appointment-hero-overlay"></div>
@@ -198,7 +198,7 @@ const Appointment = () => {
               <div className="progress-line"></div>
               <div className={`progress-step ${currentStep >= 2 ? 'active' : ''} ${currentStep > 2 ? 'completed' : ''}`}>
                 <div className="step-number">2</div>
-                <div className="step-label">Appointment</div>
+                <div className="step-label">Appointment Info</div>
               </div>
               <div className="progress-line"></div>
               <div className={`progress-step ${currentStep >= 3 ? 'active' : ''} ${currentStep > 3 ? 'completed' : ''}`}>

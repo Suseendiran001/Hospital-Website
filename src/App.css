@@ -340,7 +340,12 @@ main {
   }
   
   .section-title h2 {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+
+  .section-title h2::after {
+  bottom: 2px;
+  width: 200px;
   }
   
   .row {
@@ -365,7 +370,12 @@ main {
 
 @media (max-width: 480px) {
   .section-title h2 {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
+  }
+
+  .section-title h2::after {
+  bottom: 2px;
+  width: 200px;
   }
   
   .card-body {

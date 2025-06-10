@@ -189,12 +189,12 @@ const About = () => {
           <div className="awards-grid">
             <div className="award-item">
               <div className="award-icon">🏆</div>
-              <h4>Excellence in Patient Care</h4>
+              <h4>Excellence in Care</h4>
               <p>Healthcare Quality Association - 2024</p>
             </div>
             <div className="award-item">
               <div className="award-icon">⭐</div>
-              <h4>5-Star Hospital Rating</h4>
+              <h4>5-Star Rating</h4>
               <p>Centers for Medicare & Medicaid Services - 2024</p>
             </div>
             <div className="award-item">

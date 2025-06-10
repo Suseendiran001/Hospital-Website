@@ -195,15 +195,50 @@
 
 .service-card {
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-icon {
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-heavy);
+}
+
+/* .service-icon {
   font-size: 4rem;
   margin-bottom: 20px;
   color: var(--primary-blue);
   display: flex;
   justify-content: center;
   align-items: center;
+} */
+
+.home-card-title {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--primary-blue);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.service-image {
+  width: 100%;
+  height: 220px;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-image img:hover {
+  transform: scale(1.05);
 }
 
 .service-link {
@@ -241,6 +276,7 @@
   border-radius: var(--border-radius);
   box-shadow: var(--shadow-light);
   transition: var(--transition);
+  border: solid 10px var(--primary-blue);
 }
 
 .why-choose-item:hover {

@@ -496,7 +496,8 @@
   .contact-form-container {
     padding: 2rem;
   }
-    .form-grid {
+  
+  .form-grid {
     grid-template-columns: 1fr;
     gap: 0.75rem;
   }
@@ -567,14 +568,14 @@
   .contact-hero-content {
     padding: 0 15px;
   }
-  
-  .contact-form-container {
-    margin: 0 15px;
+
+  .contact-form-container .section-title h2 {
+    font-size: 1.5rem;
   }
-  
-  .map-container {
-    margin: 0 15px;
-  }
+
+  .map-container .section-title h2 {
+    font-size: 1.5rem;
+  } 
 }
 
 /* Animation delays for staggered entrance */

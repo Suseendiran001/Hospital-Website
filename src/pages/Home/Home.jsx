@@ -1,6 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Home.css';
+import cardiologyImg from '../../assets/images/cardiology.jpeg';
+import neurologyImg from '../../assets/images/neurology.jpeg';
+import pediatricsImg from '../../assets/images/pediatrics.jpeg';
+import orthopedicsImg from '../../assets/images/orthodics.jpeg';
+import radiologyImg from '../../assets/images/radiology.jpeg';
+import emergencyImg from '../../assets/images/emergency.jpeg';
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -10,42 +16,54 @@ const Home = () => {
   }, []);  const services = [
     {
       icon: (
-        <div style={{ fontSize: '48px', textAlign: 'center' }}>❤️</div>
+        <div className="service-image">
+          <img src={cardiologyImg} alt="Cardiology" />
+        </div>
       ),
       title: 'Cardiology',
       description: 'Comprehensive heart care with state-of-the-art technology and experienced specialists.'
     },
     {
       icon: (
-        <div style={{ fontSize: '48px', textAlign: 'center' }}>🧠</div>
+        <div className="service-image">
+          <img src={neurologyImg} alt="Neurology" />
+        </div>
       ),
       title: 'Neurology',
       description: 'Advanced neurological treatments for brain and nervous system disorders.'
     },
     {
       icon: (
-        <div style={{ fontSize: '48px', textAlign: 'center' }}>👶</div>
+        <div className="service-image">
+          <img src={pediatricsImg} alt="Pediatrics" />
+        </div>
       ),
       title: 'Pediatrics',
-      description: 'Specialized care for children from infancy through adolescence.'
+      description: 'Specialized care for children and adolescents focused on growth, development, and wellness.'
     },
     {
       icon: (
-        <div style={{ fontSize: '48px', textAlign: 'center' }}>🦴</div>
+        <div className="service-image">
+          <img src={orthopedicsImg} alt="Orthopedics" />
+        </div>
       ),
       title: 'Orthopedics',
-      description: 'Expert treatment for bone, joint, and muscle conditions.'
+      description: 'Advanced bone, joint, and muscle treatment with comprehensive rehabilitation services.'
     },
     {
       icon: (
-        <div style={{ fontSize: '48px', textAlign: 'center' }}>🔬</div>
+        <div className="service-image">
+          <img src={radiologyImg} alt="Radiology" />
+        </div>
       ),
       title: 'Radiology',
       description: 'Advanced medical imaging and diagnostic services with cutting-edge technology.'
     },
     {
       icon: (
-        <div style={{ fontSize: '48px', textAlign: 'center' }}>🚨</div>
+        <div className="service-image">
+          <img src={emergencyImg} alt="Emergency Medicine" />
+        </div>
       ),
       title: 'Emergency Medicine',
       description: '24/7 emergency and trauma care with rapid response medical teams.'
@@ -159,7 +177,7 @@ const Home = () => {
               <div key={index} className="service-card card animate-fadeInUp">
                 <div className="service-icon">{service.icon}</div>
                 <div className="card-body">
-                  <h3 className="card-title">{service.title}</h3>
+                  <h3 className="home-card-title">{service.title}</h3>
                   <p className="card-text">{service.description}</p>
                   <Link to="/services" className="service-link">
                     Learn More →
@@ -196,24 +214,6 @@ const Home = () => {
           </div>
         </div>
       </section>
-
-      {/* CTA Section */}
-      {/* <section className="cta-section">
-        <div className="container">
-          <div className="cta-content">
-            <h2>Ready to Get Started?</h2>
-            <p>Book your appointment today and experience the difference of quality healthcare.</p>
-            <div className="cta-buttons">
-              <Link to="/appointment" className="btn btn-primary">
-                Book Appointment Now
-              </Link>
-              <Link to="/contact" className="btn btn-secondary">
-                Contact Us
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section> */}
     </div>
   );
 };
