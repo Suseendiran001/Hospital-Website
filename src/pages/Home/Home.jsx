@@ -38,7 +38,7 @@ const Home = () => {
     },
     {
       icon: (
-        <div style={{ fontSize: '48px', textAlign: 'center' }}>📸</div>
+        <div style={{ fontSize: '48px', textAlign: 'center' }}>🔬</div>
       ),
       title: 'Radiology',
       description: 'Advanced medical imaging and diagnostic services with cutting-edge technology.'

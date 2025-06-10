@@ -98,11 +98,11 @@ const Services = () => {
         'Dr. Rachel White - Sports Medicine Specialist',
         'Dr. Kevin Lee - Spine Surgeon'
       ]
-    },
+    },    
     {
       id: 'radiology',
       name: 'Radiology',
-      icon: '📡',
+      icon: '🔬',
       description: 'Advanced medical imaging services',
       fullDescription: 'Our Radiology department provides comprehensive diagnostic imaging services using the latest technology to help diagnose and monitor various medical conditions with precision and accuracy.',
       services: [
